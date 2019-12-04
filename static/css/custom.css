@@ -1,0 +1,94 @@
+body {
+    background-color: #181712;
+    color: #F0F0F0;
+}
+
+#blog-title a { 
+    font-family:Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace,monospace;
+    color: #fff;
+    background-color: #181712;
+}
+#blog-title a:hover { 
+    color: #B0ABA0;
+    background-color: #181712;
+}
+#blog-title a,body footer,header nav{font-family:Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace;color:#fff}
+
+#post #blog-title {
+    padding: 4px 8px;
+    color: #B0ABA0;
+    background-color: #181712;
+}
+#post #blog-title a {
+    /*padding: 4px 8px;*/
+    color: #B0ABA0;
+    background-color: #181712;
+}
+#post #blog-title a:hover { 
+    color: #B0ABA0;
+    background-color: #181712;
+}
+
+
+header p.description {
+    font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size:0.9rem !important;
+    letter-spacing:0.2rem;
+    font-weight:normal;
+    text-transform:uppercase;
+}
+
+
+.post-title {
+    font-weight: normal;
+    /*color: #F0F0F0;*/
+}
+.post-title a.u-url:link, .post-title a.u-url:visited {
+    color: #F0F0F0;
+}
+
+.dt-published {
+    color: #B0ABA0;
+}
+
+.h-entry h2,.h-entry h3{font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;font-weight:bold;text-transform:uppercase}
+.h-entry h3{letter-spacing:0.15rem}.h-entry h4,.h-entry h4,.h-entry h6{font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;font-weight:bold}
+.post-title{font-weight:normal}
+.p-summary p{font-size:1.3rem;line-height:1.5 !important}
+.e-content p{font-size:1.4rem;line-height:1.6 !important}
+
+.read-more{
+    font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
+    color: #B0ABA0;
+}
+
+.read-more::before{content:'» '}
+
+body#collection a.read-more {
+    color: #B0ABA0;
+    text-decoration: none;
+}
+
+body#collection a.read-more:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+#collection article,#post article,#subpage #wrapper h1,#subpage article,#wrapper{max-width:860px !important}
+
+
+article p a {
+    color: #6ABED8;
+    text-decoration: none;
+}
+article p a:hover {
+    background-color: #6ABED8;
+    color: white;
+    text-decoration: none;
+}
+
+
+hr{background-color:#757571}
+/*
+body footer nav {display:none}
+#manage{display:none}
+*/
