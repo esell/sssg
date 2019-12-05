@@ -11,7 +11,7 @@
 # god have mercy on your soul.
 #########################################################
 
-BASE_URL="http://localhost:8080/"
+BASE_URL="https://hate-machine.com/"
 BASE_DIR="$PWD"
 INPUT_DIR="$BASE_DIR/drafts"
 OUT_DIR="$BASE_DIR/pub"
@@ -72,7 +72,7 @@ while read LINE; do
 done < <(sort -nr $BASE_DIR/all-posts.md)
 echo "---" >> "$BASE_DIR/postlist.md"
 
-pandoc -o "$OUT_DIR/index.html" -B "$TEMPLATE_DIR/header.html" --template "$TEMPLATE_DIR/index.html" --metadata title="My Amazing Site" "$BASE_DIR/postlist.md"
+pandoc -o "$OUT_DIR/index.html" -B "$TEMPLATE_DIR/header.html" --template "$TEMPLATE_DIR/index.html" --metadata title="The Hate Machine" "$BASE_DIR/postlist.md"
 
 # copy over static stuff
 cp -r "$STATIC_DIR" "$OUT_DIR/"
