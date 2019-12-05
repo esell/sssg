@@ -1,94 +1,325 @@
+/* body */
 body {
     background-color: #181712;
     color: #F0F0F0;
+    font-family: Lora,'Palatino Linotype','Book Antiqua','New York','DejaVu serif',serif;
+    font-size-adjust: .5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
 }
 
-#blog-title a { 
-    font-family:Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace,monospace;
+body h1, body h2, body h3 {
+    line-height: 1.2;
+}
+
+body h1 a:hover, body header h2 a:hover {
+    color: #303030;
+    text-decoration: none;
+}
+
+body h1 a, body header h2 a {
+    color: #000;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body#collection #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body#collection #wrapper article {
+    margin-bottom: 4em;
+}
+
+
+body#collection #wrapper h2 + time {
+    display: block;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+body#collection #wrapper time {
+    font-size: 1.1em;
+}
+
+body#collection #wrapper h2 {
+    margin-top: 0;
+    margin-bottom: .25em;
+}
+
+body#collection header {
+    padding: 0 1em;
+    text-align: center;
+    max-width: 50em;
+    margin: 3em auto 4em;
+}
+
+body#collection article {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+body#collection article, body#post article, pre {
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+
+body#collection article p {
+    line-height: 1.4em;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+
+}
+
+body#collection article p, body#post article {
+    display: block;
+    unicode-bidi: embed;
+    /*    white-space: pre;*/
+}
+/*
+body#collection article p.norm, body#collection article p.sans, body#collection article p.wrap, body#post article.norm, body#post article.sans, body#post article.wrap, pre.norm, pre.sans, pre.wrap, textarea.norm, textarea.sans, textarea.wrap {
+    line-height: 1.4em;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+*/
+body#post header {
+    
+    margin: 0 auto;
+    padding: 1em 2rem;
+    
+    /*
+    -moz-opacity: .4;
+    -khtml-opacity: .4;
+    -webkit-opacity: .4;
+    opacity: .4;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    filter: alpha(opacity=40);
+    -moz-transition-property: opacity;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -moz-transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+    */
+}
+body#post header h1 {
+    font-size: 1.6em;
+}
+
+body#post article {
+    margin-bottom: 2em !important;
+}
+
+body#post article h2 {
+    font-size: 1.17em;
+}
+
+body#post article h2#title {
+    font-size: 1.5em;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+/*
+body#post article code, body#post article h1, body#post article h2, body#post article h3, body#post article h4, body#post article h5, body#post article h6, body#post article ol, body#post article p, body#post article ul {
+    display: inline;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+*/
+body footer {
+    text-align: center;
+    padding: 0 2em;
+}
+body footer nav {
+    margin: 3em 0 4em;
+    color: #444;
+}
+/* end body */
+
+/* header */
+header {
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-opacity: 1;
+    opacity: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    filter: alpha(opacity=100);
+}
+
+header h1, header h2 {
+    display: inline;
+}
+
+header p.description {
+    color: #666;
+    font-size: 0.9rem !important;
+    margin-top: .5em;
+    line-height: 1.5;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* end header */
+
+
+
+/* collection */
+#collection article, #post article, #wrapper {
+    max-width: 860px !important;
+}
+
+/* end collection */
+
+
+/* wrapper */
+#wrapper {
+    max-width: 50em;
+    margin: 1em 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+#wrapper h2, #wrapper h3, #wrapper h4 {
+    color: #444;
+}
+
+/* end wrapper */
+
+/* font */
+.font.code, .font.mono, .font.wrap, body#collection article.code, body#collection article.mono, body#collection article.wrap, body#post article.code, body#post article.mono, body#post article.wrap, pre.code, pre.mono, pre.wrap, span.code, span.mono, span.wrap, textarea.code, textarea.mono, textarea.wrap {
+    font-family: Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace,monospace;
+}
+/* end font */
+
+/* blog-title */
+#blog-title a:hover {
+    color: #B0ABA0;
+    background-color: #181712;
+}
+
+#blog-title a, body footer, header nav {
+    font-family: Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace;
+    color: #fff;
+}
+#blog-title a {
+    font-family: Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace,monospace;
     color: #fff;
     background-color: #181712;
 }
-#blog-title a:hover { 
-    color: #B0ABA0;
-    background-color: #181712;
-}
-#blog-title a,body footer,header nav{font-family:Hack,consolas,Menlo-Regular,Menlo,Monaco,'ubuntu mono',monospace;color:#fff}
+/* end blog-title */
 
+
+/* post */
 #post #blog-title {
-    padding: 4px 8px;
-    color: #B0ABA0;
-    background-color: #181712;
-}
-#post #blog-title a {
     /*padding: 4px 8px;*/
+    padding-top: 4px;
     color: #B0ABA0;
     background-color: #181712;
 }
-#post #blog-title a:hover { 
+
+#post #blog-title a {
+   /* padding: 4px 8px;*/
+    padding-top: 4px;
     color: #B0ABA0;
     background-color: #181712;
 }
-
-
-header p.description {
-    font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
-    font-size:0.9rem !important;
-    letter-spacing:0.2rem;
-    font-weight:normal;
-    text-transform:uppercase;
-}
-
-
-.post-title {
-    font-weight: normal;
-    /*color: #F0F0F0;*/
-}
-.post-title a.u-url:link, .post-title a.u-url:visited {
-    color: #F0F0F0;
-}
-
+/* end post */
 .dt-published {
     color: #B0ABA0;
 }
 
-.h-entry h2,.h-entry h3{font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;font-weight:bold;text-transform:uppercase}
-.h-entry h3{letter-spacing:0.15rem}.h-entry h4,.h-entry h4,.h-entry h6{font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;font-weight:bold}
-.post-title{font-weight:normal}
-.p-summary p{font-size:1.3rem;line-height:1.5 !important}
-.e-content p{font-size:1.4rem;line-height:1.6 !important}
-
-.read-more{
-    font-family:'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
-    color: #B0ABA0;
+.h-entry h2, .h-entry h3 {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.read-more::before{content:'» '}
+.post-title {
+    font-weight: normal;
+}
 
-body#collection a.read-more {
-    color: #B0ABA0;
+.post-title a:link {
+    color: #333;
+}
+
+.post-title a.u-url:link, .post-title a.u-url:visited {
+    color: #F0F0F0;
+}
+
+.p-summary p {
+    font-size: 1.3rem;
+    line-height: 1.5 !important;
+}
+
+.e-content p {
+    font-size: 1.4rem;
+    line-height: 1.4 !important;
+}
+
+.hljs, article, pre {
+    padding: .5em 2rem 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+}
+
+.hljs, body#post article, pre {
+    font-size: 1.2em;
+}
+
+hr {
+    background-color: #757571;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    /*background: #ccc;*/
+    /*background-color: rgb(204, 204, 204);*/
+    max-width: 40em;
+    margin: 4em auto;
+    text-align: center;
+}
+
+article p a:hover {
+    background-color: #6ABED8;
+color: white;
     text-decoration: none;
 }
-
-body#collection a.read-more:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-#collection article,#post article,#subpage #wrapper h1,#subpage article,#wrapper{max-width:860px !important}
-
 
 article p a {
     color: #6ABED8;
     text-decoration: none;
 }
-article p a:hover {
-    background-color: #6ABED8;
-    color: white;
-    text-decoration: none;
-}
-
-
-hr{background-color:#757571}
-/*
-body footer nav {display:none}
-#manage{display:none}
-*/
