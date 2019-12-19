@@ -13,8 +13,9 @@
         <meta name="dcterms.date" content="$date-meta$">
         $endif$
         <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>	
-
-        <link rel="stylesheet" type="text/css" href="/static/css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/terminal.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
 
         $for(css)$
         <link rel="stylesheet" href="$css$">
@@ -24,34 +25,29 @@
         $header-includes$
         $endfor$
     </head>
-    <body id="collection" itemscope itemtype="http://schema.org/WebPage">
+    <body class="terminal"> 
         <!-- header start -->
         $for(include-before)$
         $include-before$
         $endfor$
         <!-- header end -->
 
-        <section id="wrapper" itemscope itemtype="http://schema.org/Blog">
+        <div class="container">
             $for(posts)$
-            <article class="wrap h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-                <h2 class="post-title" itemprop="name" class="p-name">
-                    <a href="$posts.link$" itemprop="url" class="u-url">$posts.title$</a>
-                </h2>
+            <article>
+                <a href="$posts.link$" class="frontpage">$posts.title$</a>
+            <br/>
+                <time>$posts.date$</time>
 
-                <time class="dt-published" pubdate itemprop="datePublished">$posts.date$</time>
-
-                <div lang="en" dir="auto" class="book p-summary"><p>$posts.summary$</p></div>
+                <div><p class="frontpage">$posts.summary$</p></div>
             </article>
             $endfor$
-        </section>
 
-        <footer>
-            <hr />
-            <nav dir="ltr">
-                powered by hate
-            </nav>
-        </footer>
-
+            <footer>
+                <hr />
+                    powered by hate
+            </footer>
+        </div>
     </body>
 </html>
 

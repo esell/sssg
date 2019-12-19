@@ -13,8 +13,9 @@
         <meta name="dcterms.date" content="$date-meta$">
         $endif$
         <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>	
-
-        <link rel="stylesheet" type="text/css" href="/static/css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/terminal.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
 
         $for(css)$
         <link rel="stylesheet" href="$css$">
@@ -24,29 +25,25 @@
         $header-includes$
         $endfor$
     </head>
-    <body id="post">
+    <body class="terminal">
         <!-- header start -->
         $for(include-before)$
         $include-before$
         $endfor$
         <!-- header end -->
+        <div class="container">
+            <article> 
+                <h1>$title$</h1>
+                <div>
+                    $body$
+                </div>
+            </article>
 
-        <article id="post-body" class="wrap h-entry"> 
-            <h2 id="title" class="p-name">$title$</h2>
-            <div class="e-content">
-                <p>
-                $body$
-                </p>
-            </div>
-        </article>
-
-        <footer>
-            <hr />
-            <nav dir="ltr">
-                powered by hate
-            </nav>
-        </footer>
-
+            <footer>
+                <hr />
+                    powered by hate
+            </footer>
+        </div>
     </body>
 </html>
 
