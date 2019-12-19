@@ -15,6 +15,7 @@
         <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>	
         <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="/static/css/terminal.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/hack.css" />
         <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
 
         $for(css)$
@@ -26,23 +27,23 @@
         $endfor$
     </head>
     <body class="terminal">
-        <!-- header start -->
         $for(include-before)$
         $include-before$
         $endfor$
-        <!-- header end -->
+        
         <div class="container">
             <article> 
                 <h1>$title$</h1>
+                <small>$date$</small><br/><br/>
                 <div>
                     $body$
                 </div>
             </article>
 
-            <footer>
-                <hr />
-                    powered by hate
-            </footer>
+        $for(include-after)$
+        $include-after$
+        $endfor$
+
         </div>
     </body>
 </html>

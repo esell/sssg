@@ -9,15 +9,12 @@
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
     serif;
     --background-color: #0D0D0D;
-    /*--background-color: #222225;*/
     --page-width: 60em;
     --font-color: #e8e9ed;
     --invert-font-color: #222225;
     --secondary-color: #52F2E2;
-    /*--secondary-color: #a3abba;*/
     --tertiary-color: #a3abba;
     --primary-color: #58F252;
-    /*--primary-color: #62c4ff;*/
     --error-color: #ff3c74;
     --progress-bar-background: #3f3f44;
     --progress-bar-fill: #62c4ff;
@@ -58,21 +55,11 @@ time {
   color: #09A603;
   margin-left: 16px;
 }
-/*
-.frontpage {
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 6px;
-    margin-top: 6px;
-}
-*/
+
 a.frontpage {
-  /*color: #03A696;*/
     color: var(--font-color);
     font-size: 24px;
     font-weight: bold;
-    /*padding-top: 10px;*/
-    /*margin-top: 10px;*/
     text-decoration: none;
 }
 
@@ -102,4 +89,9 @@ article {
 p.frontpage {
   margin-left: 16px;
   color: var(--tertiary-color);
+}
+
+footer {
+    color: var(--error-color);
+    padding-bottom: 8px;
 }

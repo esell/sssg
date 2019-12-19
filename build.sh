@@ -11,7 +11,7 @@
 # god have mercy on your soul.
 #########################################################
 
-BASE_URL="https://hate-machine.com/"
+BASE_URL="https://esheavyindustries.com/"
 BASE_DIR="$PWD"
 INPUT_DIR="$BASE_DIR/drafts"
 OUT_DIR="$BASE_DIR/pub"
@@ -53,7 +53,7 @@ for file in `ls $INPUT_DIR`; do
         # safety first!
         unset IFS
 
-        pandoc -o "$OUT_DIR/$OUT_FILE.html" -B "$TEMPLATE_DIR/header.html" --template "$TEMPLATE_DIR/single.html" "$INPUT_DIR/$file"
+        pandoc -o "$OUT_DIR/$OUT_FILE.html" -B "$TEMPLATE_DIR/header.html" -A "$TEMPLATE_DIR/footer.html" --template "$TEMPLATE_DIR/single.html" "$INPUT_DIR/$file"
 
         POST_SUMMARY=`grep -m 1 -P -o '(?<=<p>).*(?=</p>)' $OUT_DIR/$OUT_FILE.html |cut -d ' ' -f 1-40 | sed -e 's/<[^>]*>//'`
         echo "$SORTDATE%%$POST_TITLE_CLEAN%%/$OUT_FILE.html%%$POST_DATE_CLEAN%%$POST_SUMMARY..." >> "$BASE_DIR/all-posts.md"
@@ -72,7 +72,7 @@ while read LINE; do
 done < <(sort -nr $BASE_DIR/all-posts.md)
 echo "---" >> "$BASE_DIR/postlist.md"
 
-pandoc -o "$OUT_DIR/index.html" -B "$TEMPLATE_DIR/header.html" --template "$TEMPLATE_DIR/index.html" --metadata title="The Hate Machine" "$BASE_DIR/postlist.md"
+pandoc -o "$OUT_DIR/index.html" -B "$TEMPLATE_DIR/header.html" -A "$TEMPLATE_DIR/footer.html" --template "$TEMPLATE_DIR/index.html" --metadata title="|| es Heavy Industries ||" "$BASE_DIR/postlist.md"
 
 # copy over static stuff
 cp -r "$STATIC_DIR" "$OUT_DIR/"
