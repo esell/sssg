@@ -20,3 +20,6 @@ i can't remember exact times, but probably within the first 5 hours i had low le
 during that window i would reset and work on some of the other boxes when i got frustrated with the first two. i easily spent 6+ hours on one without ever getting a low level shell. i had no idea what to do or what i was looking for. it was as if i'd never done this before and it was at that point that i realized that this was not going to be successful. i kept at it, but by the end of the exam i had only rooted two boxes and had zero access on any of the others (40 points of the required 70 to pass).
 
 i'm sure i got stuck going down rabbit holes, which is even more frustrating to think back and realize that, after 6+ hours, it is totally possible that i wasn't even close to the right path. at 2am (23 hours later) i called it and went to bed for some much needed sleep. that walk to the bedroom was filled with anger, frustration and hopelessness. i came away wondering “what am i doing? i suck at this and should quit”. but you know what, fuck that shit. like the [\@offsectraining](https://twitter.com/offsectraining) folks say, “try harder!” which is exactly what this cert is all about. getting your ass kicked, learning a ton and then coming back to rock that shit later.
+
+*UPDATE* i did end up passing on my 2nd try :)
+
