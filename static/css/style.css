@@ -1,0 +1,97 @@
+:root {
+    --global-font-size: 15px;
+    --global-line-height: 1.4em;
+    --global-space: 10px;
+    --font-stack: Hack, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    serif;
+    --mono-font-stack: Hack, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    serif;
+    --background-color: #0D0D0D;
+    --page-width: 60em;
+    --font-color: #e8e9ed;
+    --invert-font-color: #222225;
+    --secondary-color: #52F2E2;
+    --tertiary-color: #a3abba;
+    --primary-color: #58F252;
+    --error-color: #ff3c74;
+    --progress-bar-background: #3f3f44;
+    --progress-bar-fill: #62c4ff;
+    --code-bg-color: #3f3f44;
+    --input-style: solid;
+    --display-h1-decoration: none;
+}
+
+a.img-link:hover {
+    background-color: var(--background-color);
+}
+
+.terminal-menu {
+    align-self: flex-start;
+    width: 30%;
+}
+
+header {
+    margin-top: 10px;
+}
+
+h1::before {
+    color: var(--tertiary-color);
+    font-size: 32px;
+    content: "[";
+    display: inline;
+}
+
+h1::after {
+    color: var(--tertiary-color);
+    font-size: 32px;
+    content: "]";
+    display: inline;
+}
+
+time {
+  font-size: 12px;
+  color: #09A603;
+  margin-left: 16px;
+}
+
+a.frontpage {
+    color: var(--font-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.frontpage::before {
+    color: var(--tertiary-color);
+    font-size: 32px;
+    content: "[";
+    display: inline;
+}
+
+a.frontpage::after {
+    color: var(--tertiary-color);
+    font-size: 32px;
+    content: "]";
+    display: inline;
+}
+
+a.frontpage:hover {
+  background-color: var(--background-color);
+}
+
+article {
+ padding-top: 4px;
+ padding-bottom: 4px;
+}
+
+p.frontpage {
+  margin-left: 16px;
+  color: var(--tertiary-color);
+}
+
+footer {
+    color: var(--error-color);
+    padding-bottom: 8px;
+}
